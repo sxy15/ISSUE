@@ -1,0 +1,17 @@
+name: issue2md
+description: Convert GitHub issues to markdown
+
+on:
+    issues:
+        types: [opened, edited, closed, reopened]
+    issue_comment:
+        types: [created, edited, deleted]
+    
+jobs:
+    issue2md:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: issue2md
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
