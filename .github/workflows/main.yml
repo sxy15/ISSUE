@@ -1,5 +1,4 @@
 name: issue2md
-description: Convert GitHub issues to markdown
 
 on:
     issues:
@@ -15,4 +14,3 @@ jobs:
             - uses: sxy15/issue2md@main
               with:
                 token: ${{ secrets.GITHUB_TOKEN }}
-                event: ${{ event_type }}
