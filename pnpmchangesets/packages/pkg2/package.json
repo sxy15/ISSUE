@@ -1,0 +1,24 @@
+{
+  "name": "@anfu/pkg2",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "unbuild"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "unbuild": "^2.0.0"
+  }
+}
