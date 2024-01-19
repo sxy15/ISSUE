@@ -1,6 +1,7 @@
 # Issues
 | title | updated_at |
 | --- | --- |
+| [chrome 本地mock](https://github.com/sxy15/ISSUE/issues/6) | 2024-01-19T03:53:47Z |
 | [rust 学习备注](https://github.com/sxy15/ISSUE/issues/5) | 2024-01-17T06:29:36Z |
 | [npm link 的另一个选择 Yalc](https://github.com/sxy15/ISSUE/issues/4) | 2023-12-25T02:57:20Z |
 | [pnpm workspace + changesets](https://github.com/sxy15/ISSUE/issues/3) | 2023-12-18T13:36:43Z |
