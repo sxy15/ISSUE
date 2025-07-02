@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import { SPromise } from './utils'
+import './utils/bind.js'
 
 const p = new SPromise((resolve, reject) => {
     resolve('success')
