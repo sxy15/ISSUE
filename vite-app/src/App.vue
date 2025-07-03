@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import { SPromise } from './utils'
 import './utils/bind.js'
+import './utils/ajax.js'
 
 const p = new SPromise((resolve, reject) => {
     resolve('success')
