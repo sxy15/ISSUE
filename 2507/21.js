@@ -80,4 +80,27 @@ function generateCombinations(arr, k) {
 }
 
 // 测试用例
-console.log(findProcessorCombination([0, 1, 4, 5, 6, 7], 1)); // [[0], [1]]
+console.log(findProcessorCombination([0, 1, 2, 3, 4, 5, 6, 7], 2)); // [[0], [1]]
+
+// [鱼,肉,菜]
+// backtrack(0, [])
+// ├─ i=0（选鱼） → current = [鱼]
+// │  ├─ backtrack(1, [鱼])
+// │  │  ├─ i=1（选肉） → current = [鱼,肉]
+// │  │  │  ├─ backtrack(2, [鱼,肉]) → 长度=2，加入结果
+// │  │  │  └─ **pop() → current = [鱼]**（移除肉，恢复到上一层状态）
+// │  │  ├─ i=2（选菜） → current = [鱼,菜]
+// │  │  │  ├─ backtrack(2, [鱼,菜]) → 长度=2，加入结果
+// │  │  │  └─ **pop() → current = [鱼]**（移除菜，恢复到上一层状态）
+// │  │  └─ **pop() → current = []**（移除鱼，恢复到初始状态）
+// │
+// ├─ i=1（选肉） → current = [肉]
+// │  ├─ backtrack(2, [肉])
+// │  │  ├─ i=2（选菜） → current = [肉,菜]
+// │  │  │  ├─ backtrack(3, [肉,菜]) → 长度=2，加入结果
+// │  │  │  └─ **pop() → current = [肉]**（移除菜，恢复到上一层状态）
+// │  │  └─ **pop() → current = []**（移除肉，恢复到初始状态）
+// │
+// └─ i=2（选菜） → current = [菜]
+//    └─ backtrack(3, [菜]) → 长度=1 < 2，无结果
+//       └─ **pop() → current = []**（移除菜，恢复到初始状态）
